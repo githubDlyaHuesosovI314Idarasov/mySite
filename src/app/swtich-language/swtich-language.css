@@ -1,0 +1,33 @@
+.first{
+ width: 50px;
+ height: 38px;
+ border: 4px solid;
+ border-right: 2px solid;
+ border-color: #36454F;
+ transition: all 0.33s ease;
+}
+
+.second {
+ width: 50px;
+ height: 38px;
+ border: 4px solid;
+ border-left: 2px solid;
+ border-color: #36454F;
+ transition: all 0.33s ease;
+}
+
+button.active {
+    background-color: skyblue;
+}
+
+.flag{
+ width: 100%;
+ height: 100%;
+}
+
+.first:hover{
+    background-color : lightblue;
+}
+.second:hover{
+    background-color: lightblue;
+}

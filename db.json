@@ -1,0 +1,102 @@
+{
+    "primaryStackList": [
+    {
+        "name": "HTML",
+        "photo": "/assets/stacks/html.svg",
+        "width": 40
+    },
+    {
+        "name": "CSS",
+        "photo": "/assets/stacks/CSS.svg",
+        "width": 40
+    },
+    {
+        "name" : "Javascript",
+        "photo": "/assets/stacks/js.svg",
+        "width": 35
+    },
+    {
+        "name": "C#/.NET",
+        "photo": "/assets/stacks/Csharp.svg",
+        "width": 40
+    },
+    {
+        "name": "MS SQL Server",
+        "photo": "/assets/stacks/msSqlServer.svg",
+        "width": 40
+    },
+    {
+        "name": "postgreSQL",
+        "photo": "/assets/stacks/postgre.svg",
+        "width": 40
+    },
+        {
+        "name": "EntityFramework Core(ORM)",
+        "photo": "/assets/stacks/EFCore.svg",
+        "width": 35   
+    },
+    {
+        "name": "ASP.NET Core(MVC/RazorPages)",
+        "photo": "/assets/stacks/aspnet.svg",
+        "width": 40
+    },
+        {
+        "name": "Angular v20",
+        "photo": "/assets/stacks/Angular.svg",
+        "width": 40
+    }],
+
+    "secondaryStackList": [
+    {
+        "name": "C++",
+        "photo": "/assets/stacks/Cplusplus.svg",
+        "width": 40
+    },
+    {
+        "name": "Java",
+        "photo": "/assets/stacks/java.svg",
+        "width": 40
+    },
+        {
+        "name": "Hibernate",
+        "photo": "/assets/stacks/hibernate.svg",
+        "width": 40
+    },
+    {
+        "name": "Spring",
+        "photo": "/assets/stacks/spring.svg",
+        "width": 40
+    },
+        {
+        "name": "PHP",
+        "photo": "/assets/stacks/php.svg",
+        "width": 40 
+    },
+    {
+        "name": "Python",
+        "photo": "/assets/stacks/python.svg",
+        "width": 40
+    }
+    ],
+    "projectList" : 
+    [
+    {
+        "id": 1,
+        "title": "My personal site",
+        "description": "yeah",
+        "photo": "/assets/portfolio/mySite.png",
+        "width": 120,
+        "height": 80
+    },
+    {
+        "id": 2,
+        "title": "WebFlightDB",
+        "description": "thats a desrpition",
+        "photo": "/assets/portfolio/mySite.png",
+        "width": 120,
+        "height": 80
+    }
+    ]
+
+
+}

@@ -1,16 +1,76 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject, OnInit, signal } from '@angular/core';
+import { RouterOutlet, RouterModule } from '@angular/router';
+import { MyContacts } from './my-contacts/my-contacts';
+import { SwtichLanguage } from './swtich-language/swtich-language';
+import { TranslatePipe, TranslateService} from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterModule, MyContacts, SwtichLanguage, TranslatePipe],
+  standalone: true,
   template: `
-    <h1>Welcome to {{ title() }}!</h1>
+  <div class="container-fluid">
+      <div class="row bg-light">
+        <div class="col-12">
+            <div id="line" class="row mb-0 mt-4">
+              <div class="ms-5 col col-1">
+                <img class="myPhoto" src="" alt="My photo"/>              
+              </div>
+              <div class="col col-2">
+                <h2>{{'HEADER.TITLE' | translate}}</h2>
+                <h4>Fullstack/Backend Engineer</h4>
+              </div>
+              <div class="d-flex col-4 align-items-end">
+                <a routerLink="" class="ms-2 me-2 pt-2 pb-2 rounded-top d-flex align-items-center justify-content-center">
+                  {{'HEADER.ABOUT' | translate}}
+                </a>
+                <a routerLink="experience" class="ms-2 me-2 pt-2 pb-2 rounded-top d-flex align-items-center justify-content-center" style="width: 200px;">
+                  {{'HEADER.EXPERIENCE' | translate}}
+                </a>
+                <a routerLink="portfolio" class="ms-2 me-2 pt-2 pb-2 rounded-top d-flex align-items-center justify-content-center">
+                  {{'HEADER.PORTFOLIO' | translate}}
+                </a>
+              </div>
 
-    <router-outlet />
+              <div class="col-1 ms-auto">
+                <app-swtich-language></app-swtich-language>
+              </div>
+            </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+          <div class="d-flex gap-3">
+            <div class="content flex-grow-1">
+              <router-outlet/>
+            </div>
+            
+            <div class="flex-shrink-0" style="width: 280px;">
+              <app-my-contacts ></app-my-contacts>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
   `,
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
-export class App {
-  protected readonly title = signal('y');
+export class App implements OnInit 
+{
+  private translate = inject(TranslateService);
+  protected readonly title = signal('MySite');
+
+  ngOnInit(): void {
+    this.translate.addLangs(['en', 'ua']);
+
+    const savedLang = localStorage.getItem('selectedLanguage');
+    const browserLang = this.translate.getBrowserLang();
+
+    const languageToUse = savedLang || (browserLang?.match(/en|ua/) ? browserLang : 'en');
+    
+    this.translate.use(languageToUse);
+  }
+
 }

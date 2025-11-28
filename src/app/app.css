@@ -1,0 +1,34 @@
+
+a[routerLink]{
+
+  color: var(--secondary-color);
+  display: inline-block;
+  border: solid 1px var(--primary-color);
+  align-content: center;
+  background-color: var(--primary-color);
+  text-align: center;
+  text-decoration: none;
+  width: clamp(6rem, 12vw, 10rem);
+  height: clamp(2.5rem, 5vh, 3.5rem);
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
+  padding: clamp(0.5rem, 1vw, 1rem);
+  transition: all 0.5s ease;
+
+}
+
+a[routerLink]:visited{
+  color: white;
+}
+
+a[routerLink]:hover{
+   background-color:darkblue;
+   border: solid 1px darkblue;
+}
+
+.myPhoto{
+  border: solid 5px #36454F;
+}
+
+div#line {
+  border-bottom: solid 30px #D3D3D3;
+}

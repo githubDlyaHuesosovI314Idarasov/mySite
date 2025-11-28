@@ -1,0 +1,25 @@
+{
+	"ABOUT": {
+		"DESCRIPTION": "I am a software engineer specializing in the development of web applications using modern programming languages and frameworks. My main areas of interest include implementing backend logic for managing user resources, designing and maintaining databases, and developing intuitive user interfaces that ensure a seamless and efficient user experience.",
+		"EXPERIENCE": "I hold a Bachelor's degree from Kremenchuk Mykhailo Ostrohradskyi National University and possess a B1 (Intermediate) level of English proficiency. I am currently seeking an internship position as a Fullstack or Backend Developer. I enjoy solving complex technical challenges, writing clean and maintainable code, and continuously learning new tools and frameworks to improve my craft.",
+		"HOBBIES": "In my spare time, I enjoy engaging in activities such as playing board and computer games, reading, participating in athletics, and continuously enhancing my programming skills and professional knowledge. My goal is to grow as a developer, contribute to impactful projects, and become a valuable member of a dynamic engineering team."
+	},
+	"CONTACT": {
+		"GITHUB": "My github",
+		"LINKEDIN": "My LinkedIn profile",
+		"TELEGRAM": "My Telegram",
+		"TITLE": "My contacts here:"
+	},
+	"EXPERIENCE": {
+		"COMMENT": "However you can message me to any contacts of mine to fix that problem :)",
+		"DESCRIPTION": "Currently I don't have any commercial experience.",
+		"PRIMARYSTACKS": "My primary stacks:",
+		"SECONDARYSTACKS": "My other stacks:"
+	},
+	"HEADER": {
+		"ABOUT": "About me",
+		"EXPERIENCE": "Experience & my stacks",
+		"PORTFOLIO": "Portfolio",
+		"TITLE": "Anatolii Deriaha"
+	}
+}

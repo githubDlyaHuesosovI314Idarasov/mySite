@@ -10,8 +10,9 @@ import { RouterModule, RouterLink } from '@angular/router';
   <div class="container-fluid mb-4">
     <div class="card border border-secondary rouded">
       <div class="card-header border-secondary">
-        <img [src]="projectInfo.photo", [width]="projectInfo.width" [height]="projectInfo.height"/> 
-        <h3 class="card-title">{{projectInfo.title}}</h3> 
+        <h2 class="card-title">
+          <img class="border border-4 border-secondary rounded" [src]="projectInfo.photo" [width]="projectInfo.width" [height]="projectInfo.height"/> {{projectInfo.title}}
+        </h2> 
       </div>
       <div class="card-body border-secondary">
         <div class="card-text">{{projectInfo.description}} here descriprion</div>

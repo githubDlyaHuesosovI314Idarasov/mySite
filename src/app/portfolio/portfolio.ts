@@ -11,8 +11,7 @@ import { ProjectInfo } from '../project-info';
   template: `
     <div class="me-5 mt-4 ms-5">
       @for(projectInfo of projectList; track $index) {
-      {{projectInfo.title}}
-      <app-project-template [projectInfo]="projectInfo"> </app-project-template>
+        <app-project-template [projectInfo]="projectInfo"> </app-project-template>
       }
     </div>
   `,

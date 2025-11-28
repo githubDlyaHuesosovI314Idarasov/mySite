@@ -10,10 +10,10 @@ import { ProjectInfo } from '../project-info';
   standalone: true,
   template: `
     <div class="me-5 mt-4 ms-5">
-      @for( projectInfo of projectList; track projectInfo){
-        <app-project-template [projectInfo]="projectInfo"> </app-project-template>
+      @for(projectInfo of projectList; track $index) {
+      {{projectInfo.title}}
+      <app-project-template [projectInfo]="projectInfo"> </app-project-template>
       }
-
     </div>
   `,
   styleUrl: './portfolio.css',
@@ -24,8 +24,8 @@ export class PortfolioComponent {
   projectList: ProjectInfo[] = [];
 
   constructor() {
-    this.projectInfoService.getAllProjects().then((projectList: ProjectInfo[]) => {
-      this.projectList = projectList;
+    this.projectInfoService.getAllProjects().then((list: ProjectInfo[]) => {
+      this.projectList = list;
     });
     
   }

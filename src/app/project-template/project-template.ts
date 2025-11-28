@@ -4,7 +4,7 @@ import { ProjectInfo } from '../project-info';
 import { RouterModule, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-project-template',
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, RouterLink],
   standalone: true,
   template: `
   <div class="container-fluid mb-4">

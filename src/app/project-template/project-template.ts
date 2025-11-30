@@ -7,16 +7,30 @@ import { RouterModule, RouterLink } from '@angular/router';
   imports: [RouterModule, CommonModule, RouterLink],
   standalone: true,
   template: `
-  <div class="container-fluid mb-4">
+  <div class="container mb-4">
     <div class="card border border-secondary rouded">
+
       <div class="card-header border-secondary">
-        <h2 class="card-title">
-          <img class="border border-4 border-secondary rounded" [src]="projectInfo.photo" [width]="projectInfo.width" [height]="projectInfo.height"/> {{projectInfo.title}}
-        </h2> 
+        <div class="row">
+          <div class="col-3">
+            <img class="border border-4 border-secondary rounded" [src]="projectInfo.photo" [width]="projectInfo.width" [height]="projectInfo.height"/> 
+          </div>
+          <div class="col-4"> 
+            <h2 class="card-tile">
+            {{projectInfo.title}}
+            </h2>
+            <div class="row card-text">
+              Tags here:
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card-body border-secondary">
-        <div class="card-text">{{projectInfo.description}} here descriprion</div>
-        <a [routerLink]="['/details', projectInfo.id]">Learn More</a>
+
+      <div class="card-body border-secondary">  
+        <div class="row">
+          <div class="card-text">{{projectInfo.description}} here descriprion</div>
+          <a [routerLink]="['/details', projectInfo.id]">Learn More</a>
+        </div>
       </div>
     </div>
   </div>

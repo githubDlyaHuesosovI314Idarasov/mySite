@@ -10,9 +10,13 @@ import { ProjectInfo } from '../project-info';
   standalone: true,
   template: `
     <div class="me-5 mt-4 ms-5">
-      @for(projectInfo of projectList; track $index) {
-        <app-project-template [projectInfo]="projectInfo"> </app-project-template>
-      }
+      <div class="row">
+        @for(projectInfo of projectList; track $index) {
+          <div class="col-5 ms-5 me-5">
+          <app-project-template [projectInfo]="projectInfo" > </app-project-template>
+          </div>
+        }
+      </div>
     </div>
   `,
   styleUrl: './portfolio.css',

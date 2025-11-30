@@ -85,7 +85,7 @@
         "title": "My personal site",
         "description": "yeah",
         "photo": "/assets/portfolio/mySite.png",
-        "width": 350,
+        "width": 260,
         "height": 200
     },
     {
@@ -93,8 +93,16 @@
         "title": "WebFlightDB",
         "description": "thats a desrpition",
         "photo": "/assets/portfolio/mySite.png",
-        "width": 120,
-        "height": 80
+        "width": 260,
+        "height": 200
+    },
+    {
+        "id": 3,
+        "title": "WebFlightDB",
+        "description": "thats a desrpition",
+        "photo": "/assets/portfolio/mySite.png",
+        "width": 260,
+        "height": 200
     }
     ]
 

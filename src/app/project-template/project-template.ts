@@ -11,11 +11,11 @@ import { RouterModule, RouterLink } from '@angular/router';
     <div class="card border border-secondary rouded">
 
       <div class="card-header border-secondary">
-        <div class="row">
-          <div class="col-3">
+        <div class="d-flex gap-3 align-items-start">
+          <div class="flex-shrink-0">
             <img class="border border-4 border-secondary rounded" [src]="projectInfo.photo" [width]="projectInfo.width" [height]="projectInfo.height"/> 
           </div>
-          <div class="col-4"> 
+          <div class="flex-grow-1"> 
             <h2 class="card-tile">
             {{projectInfo.title}}
             </h2>
@@ -27,10 +27,8 @@ import { RouterModule, RouterLink } from '@angular/router';
       </div>
 
       <div class="card-body border-secondary">  
-        <div class="row">
           <div class="card-text">{{projectInfo.description}} here descriprion</div>
           <a [routerLink]="['/details', projectInfo.id]">Learn More</a>
-        </div>
       </div>
     </div>
   </div>

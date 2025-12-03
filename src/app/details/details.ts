@@ -41,7 +41,7 @@ import { ProjectInfo } from '../project-info';
         <div class="col">
           <h2>{{projectInfo?.title}}</h2>
           <div class="row mb-4 ">
-            <h5>What stacks were used: </h5>
+            <h5>What stacks were used:</h5>
             @for(tag of projectInfo?.tags; track $index) {
               <span class="badge bg-primary m-1 w-auto"> {{tag}}</span>
             }

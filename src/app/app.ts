@@ -32,6 +32,11 @@ import { TranslatePipe, TranslateService} from '@ngx-translate/core';
                   {{'HEADER.PORTFOLIO' | translate}}
                 </a>
               </div>
+              <div class="d-flex col-1 ms-auto align-items-center">
+
+                <input type="text" class="form-control" placeholder="Search by title" [disabled]=""/>
+                <i class="bi bi-search"></i>
+              </div>
 
               <div class="col-1 ms-auto">
                 <app-swtich-language></app-swtich-language>

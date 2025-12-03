@@ -83,26 +83,34 @@
     {
         "id": 1,
         "title": "My personal site",
-        "description": "yeah",
-        "photo": "/assets/portfolio/mySite.png",
+        "shortDescription": "yeah",
+        "fullDescription": "thats a desrpition",
+        "primaryPhoto": "/assets/portfolio/mySite2.png",
+        "secondaryPhotosList" : [
+            "/assets/portfolio/mySite.png",
+            "/assets/portfolio/mySite1.png"
+        ],
+        "tags": ["Angular", "TypeScript", "HTML", "CSS"],
+        "liveDemoLink": "dsfasfffas",
+        "sourceCodeLink": "https://github.com/githubDlyaHuesosovI314Idarasov/mySite",
         "width": 260,
-        "height": 200
+        "height": 160
     },
     {
         "id": 2,
         "title": "WebFlightDB",
-        "description": "thats a desrpition",
-        "photo": "/assets/portfolio/mySite.png",
+        "shortDescription": "thats a desrpition",
+        "fullDescription": "thats a desrpition",
+        "primaryPhoto": "/assets/portfolio/mySite.png",
+        "secondaryPhotosList" : [
+            "/assets/portfolio/mySite.png",
+            "/assets/portfolio/mySite3.png"
+        ],
+        "tags": ["C#", ".NET", "MS SQL Server", "EntityFramework Core", "ASP.NET Core"],
+        "liveDemoLink": "",
+        "sourceCodeLink": "https://github.com/githubDlyaHuesosovI314Idarasov/WebFlightCompanyDB",
         "width": 260,
-        "height": 200
-    },
-    {
-        "id": 3,
-        "title": "WebFlightDB",
-        "description": "thats a desrpition",
-        "photo": "/assets/portfolio/mySite.png",
-        "width": 260,
-        "height": 200
+        "height": 160
     }
     ]
 

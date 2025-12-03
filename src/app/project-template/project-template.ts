@@ -13,21 +13,28 @@ import { RouterModule, RouterLink } from '@angular/router';
       <div class="card-header border-secondary">
         <div class="d-flex gap-3 align-items-start">
           <div class="flex-shrink-0">
-            <img class="border border-4 border-secondary rounded" [src]="projectInfo.photo" [width]="projectInfo.width" [height]="projectInfo.height"/> 
+            <a [routerLink]="['/details', projectInfo.id]">
+            <img class="border border-4 border-secondary rounded" [src]="projectInfo.primaryPhoto" [width]="projectInfo.width" [height]="projectInfo.height"/> 
+            </a>
           </div>
           <div class="flex-grow-1"> 
             <h2 class="card-tile">
             {{projectInfo.title}}
             </h2>
             <div class="row card-text">
-              Tags here:
+              @for(tag of projectInfo.tags; track $index) {
+                <span class="badge bg-primary m-1 w-auto"> {{tag}}</span>
+              }
             </div>
+
+            
           </div>
         </div>
       </div>
 
-      <div class="card-body border-secondary">  
-          <div class="card-text">{{projectInfo.description}} here descriprion</div>
+      <div class="card-body border-secondary">
+          <div class="card-text">{{projectInfo.shortDescription}}</div>
+          Want to know more?
           <a [routerLink]="['/details', projectInfo.id]">Learn More</a>
       </div>
     </div>
@@ -37,5 +44,6 @@ import { RouterModule, RouterLink } from '@angular/router';
 })
 export class ProjectTemplate {
   @Input() projectInfo!:ProjectInfo;
+
 
 }

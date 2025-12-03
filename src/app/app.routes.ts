@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { AboutMeComponent } from './about-me/about-me';
 import { ExperienceComponent } from './experience/experience';
 import { PortfolioComponent } from './portfolio/portfolio';
+import { DetailsComponent } from './details/details';
 
 
 const routes: Routes = [
@@ -17,6 +18,11 @@ const routes: Routes = [
 {
     path: 'portfolio',
     component: PortfolioComponent
-}];
+},
+{
+    path: 'details/:id',
+    component: DetailsComponent,
+}
+];
 
 export default routes;

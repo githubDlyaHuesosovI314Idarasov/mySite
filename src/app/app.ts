@@ -40,9 +40,9 @@ import { TranslatePipe, TranslateService} from '@ngx-translate/core';
       </div>
     </div>
     <div class="row">
-      <div class="col-12">
+      <div class="col">
           <div class="d-flex gap-3">
-            <div class="content flex-grow-1">
+            <div class="content flex-grow-1" >
               <router-outlet/>
             </div>
             

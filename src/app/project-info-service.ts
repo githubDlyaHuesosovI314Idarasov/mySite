@@ -12,4 +12,9 @@ export class ProjectInfoService {
     const data = await fetch(this.url);
     return await data.json() ?? '';
   }
+
+  async getProjectById(id: number) : Promise<ProjectInfo | undefined>{
+    const data = await fetch(`${this.url}/${id}`);
+    return await data.json() ?? {};
+  }
 }

@@ -1,5 +1,5 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
-import { RouterOutlet, RouterModule } from '@angular/router';
+import { Component, inject, OnInit, signal} from '@angular/core';
+import { RouterOutlet, RouterModule, Router, NavigationEnd} from '@angular/router';
 import { MyContacts } from './my-contacts/my-contacts';
 import { SwtichLanguage } from './swtich-language/swtich-language';
 import { TranslatePipe, TranslateService} from '@ngx-translate/core';
@@ -32,12 +32,6 @@ import { TranslatePipe, TranslateService} from '@ngx-translate/core';
                   {{'HEADER.PORTFOLIO' | translate}}
                 </a>
               </div>
-              <div class="d-flex col-1 ms-auto align-items-center">
-
-                <input type="text" class="form-control" placeholder="Search by title" [disabled]=""/>
-                <i class="bi bi-search"></i>
-              </div>
-
               <div class="col-1 ms-auto">
                 <app-swtich-language></app-swtich-language>
               </div>
@@ -56,7 +50,7 @@ import { TranslatePipe, TranslateService} from '@ngx-translate/core';
             </div>
           </div>
       </div>
-    </div>
+    </div>  
   </div>
   
   `,

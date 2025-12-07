@@ -22,7 +22,7 @@ import { RouterModule, RouterLink } from '@angular/router';
             {{projectInfo.title}}
             </h2>
             <div class="row card-text">
-              @for(tag of projectInfo.tags; track $index) {
+              @for(tag of projectInfo.tags; track projectInfo.id) {
                 <span class="badge bg-primary m-1 w-auto"> {{tag}}</span>
               }
             </div>

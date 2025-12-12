@@ -53,7 +53,7 @@ import { ProjectInfo } from '../project-info';
               </div>
             }
             <div class="gap-2">
-              <a class="btn btn-secondary w-auto" [href]="projectInfo?.sourceCodeLink" target="_blank">Source Code</a>
+              <a class="btn btn-secondary w-auto" [href]="projectInfo?.sourceCodeLink" target="_blank"><i class="bi bi-github"></i> Source Code</a>
             </div>
             <!--
             <div class="col m-2">

@@ -18,22 +18,16 @@ export class ProjectInfoService {
     return await data.json() ?? {};
   }
 
-  async getAllTags() : Promise<Map<string,number>>{ 
+  async getAllTags() : Promise<Map<string, number>>{ 
     const projects = await this.getAllProjects();
-    const tagsSet = new Set<string>();
-
     const map = new Map<string, number>();
 
     projects.forEach(project => {
       project.tags?.forEach(tag => {
-        tagsSet.add(tag);
+        map.set(tag, (map.get(tag) || 0) + 1);
       });
     });
 
-    tagsSet.forEach(tag => {
-      map.set(tag, (map.get(tag) || 0) + 1);
-    });
     return map;
-
   }
 }

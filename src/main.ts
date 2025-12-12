@@ -3,6 +3,7 @@ import { appConfig } from './app/app.config';
 import { App } from './app/app';
 import {provideRouter} from '@angular/router';
 import routeConfig from './app/app.routes';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 bootstrapApplication(App, appConfig, ) //{ providers: [ provideRouter(routeConfig),  ]}
   .catch((err) => console.error(err));

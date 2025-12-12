@@ -10,48 +10,67 @@ import { TranslatePipe, TranslateService} from '@ngx-translate/core';
   imports: [RouterOutlet, RouterModule, MyContacts, SwtichLanguage, TranslatePipe],
   standalone: true,
   template: `
-  <div class="container-fluid">
-      <div class="row bg-light">
-        <div class="col-12">
-            <div id="line" class="row mb-0 mt-4">
-              <div class="ms-5 col col-1">
-                <img class="myPhoto" src="" alt="My photo"/>              
-              </div>
-              <div class="col col-2">
-                <h2>{{'HEADER.TITLE' | translate}}</h2>
-                <h4>Fullstack/Backend Engineer</h4>
-              </div>
-              <div class="d-flex col-4 align-items-end">
-                <a routerLink="" class="ms-2 me-2 pt-2 pb-2 rounded-top d-flex align-items-center justify-content-center">
-                  {{'HEADER.ABOUT' | translate}}
-                </a>
-                <a routerLink="experience" class="ms-2 me-2 pt-2 pb-2 rounded-top d-flex align-items-center justify-content-center" style="width: 200px;">
-                  {{'HEADER.EXPERIENCE' | translate}}
-                </a>
-                <a routerLink="portfolio" class="ms-2 me-2 pt-2 pb-2 rounded-top d-flex align-items-center justify-content-center">
-                  {{'HEADER.PORTFOLIO' | translate}}
-                </a>
-              </div>
-              <div class="col-1 ms-auto">
-                <app-swtich-language></app-swtich-language>
-              </div>
-            </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-          <div class="d-flex gap-3">
-            <div class="content flex-grow-1" >
-              <router-outlet/>
-            </div>
-            
-            <div class="flex-shrink-0" style="width: 280px;">
-              <app-my-contacts ></app-my-contacts>
-            </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom border-5 pt-2">
+    <div class="container-fluid">
+
+      <div class="navbar-header d-flex justify-content-start">
+        <div class="flex-row p-2">
+          <img class="myPhoto" src="" alt="My photo"/>
+        </div>
+        <div class="flex-row p-2">
+          <div class="flex-column">
+            <h2>{{'HEADER.TITLE' | translate}}</h2>
           </div>
+          <div class="flex-columm">
+            <h4>Fullstack/Backend Engineer</h4>
+          </div>
+        </div>
       </div>
-    </div>  
-  </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav me-auto mb-lg-0 flex-row"> 
+            <li class="nav-item p-2">
+              <a routerLink="" class="nav-link rounded-top align-items-center justify-content-center">
+                {{'HEADER.ABOUT' | translate}}
+              </a>
+            </li>
+            <li class="nav-item p-2">
+              <a routerLink="experience" class="nav-link rounded-top w-auto">
+                My skills & stacks <!-- {{'HEADER.EXPERIENCE' | translate}} -->
+              </a>
+            </li>
+            <li class="nav-item p-2">
+              <a routerLink="portfolio" class="nav-link rounded-top align-items-center justify-content-center">
+                {{'HEADER.PORTFOLIO' | translate}}
+              </a>
+            </li>
+            <li class="nav-item ms-auto p-2">
+              <app-swtich-language></app-swtich-language>
+            </li>
+          </ul>
+       </div>
+
+    </div>
+  </nav>
+
+  <div class="d-flex flex-row">
+    <div class="flex-col">
+        <div class="d-flex gap-3">
+          <div class="content flex-grow-1" >
+            <router-outlet/>
+          </div>
+          
+          <div class="flex-shrink-0" style="width: 280px;">
+            <app-my-contacts ></app-my-contacts>
+          </div>
+        </div>
+    </div>
+  </div>  
+  
   
   `,
   styleUrl: './app.css',

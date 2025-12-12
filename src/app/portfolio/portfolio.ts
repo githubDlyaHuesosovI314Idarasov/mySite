@@ -4,6 +4,7 @@ import { ProjectTemplate } from "../project-template/project-template";
 import { ProjectInfoService } from '../project-info-service';
 import { ProjectInfo } from '../project-info';
 import { SearchComponent } from "../search/search";
+import { SearchCriteria } from '../search-criteria';
 
 @Component({
   selector: 'app-portfolio',
@@ -12,7 +13,7 @@ import { SearchComponent } from "../search/search";
   template: `
     <div class="me-5 mt-4 ms-5">
       <div class="row">
-       <app-search (searchText)="filterProjects($event)"></app-search>
+       <app-search (searchCriteria)="filterProjects($event)"></app-search>
       </div>
     
       <div class="row">
@@ -40,15 +41,24 @@ export class PortfolioComponent {
 
   }
     
-  filterProjects(searchText: string) {
-    if (!searchText || searchText.trim() === '') {
+  filterProjects(criteria: SearchCriteria) {
+    const searchText = criteria.text.trim().toLowerCase();
+    const searchTags = criteria.tags;
+
+    if (searchText === '' && searchTags.length === 0) {
       this.filteredProjectList = this.projectList;
       return;
     }
 
-    this.filteredProjectList = this.projectList.filter(project =>
-      project.title?.toLowerCase().includes(searchText.toLowerCase())
-    );
+    this.filteredProjectList = this.projectList.filter(project => {
+      const matchesText = searchText === '' || 
+        project.title?.toLowerCase().includes(searchText);
+
+      const matchesTags = searchTags.length === 0 || 
+        searchTags.every(tag => project.tags?.includes(tag));
+
+      return matchesText && matchesTags;
+    });
   }
   
 
